@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20161010
+FROM ubuntu:xenial-20161213
 MAINTAINER djmattyg007
 
 RUN echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/90-norecommends && \
@@ -14,4 +14,4 @@ RUN echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/90-norecommends &&
         ruby-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-RUN gem install --no-document fpm -v 1.6.3
+RUN gem install --no-document fpm -v 1.7.0
